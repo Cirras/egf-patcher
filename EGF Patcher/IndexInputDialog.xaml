@@ -1,0 +1,28 @@
+﻿<Window x:Class="EGF_Patcher.IndexInputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EGF_Patcher"
+        mc:Ignorable="d"
+        Title="EGF Patcher" Height="125.369" Width="205.859" ContentRendered="Window_ContentRendered" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Margin="15,15,12.6,7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Content="GFX ID:"/>
+        <TextBox Name="indexInput" Grid.Column="1" Margin="49.6,3.8,0.4,5.4" TextChanged="Input_TextChanged"/>
+
+        <WrapPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button IsDefault="True" Name="okButton" Click="Button_Ok" MinWidth="60" Margin="0,0,10,0" IsEnabled="False">_Ok</Button>
+            <Button IsCancel="True" MinWidth="60">_Cancel</Button>
+        </WrapPanel>
+    </Grid>
+</Window>
